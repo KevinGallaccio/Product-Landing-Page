@@ -1,0 +1,392 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap';
+
+*,
+::before,
+::after {
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #EDEBEE;
+    --background2: #FAFAFA;
+    --accent: #C62D0E;
+    --accent2: #8389A3;
+    --text: #222426;
+}
+
+html {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Lato', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    scroll-behavior: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 2rem;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    margin: 0 auto;
+    padding: 0 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--accent2);
+    flex-direction: row;
+}
+
+@media (max-width: 950px) {
+    #header {
+        padding: 0 4rem 0 2rem;
+
+    }
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 0.5rem;
+}
+
+.logo {
+    width: 11.5rem;
+    min-width: 90px;
+}
+
+@media (max-width: 658px) {
+    .logo {
+        width: 10rem;
+    }
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: var(--accent);
+    padding-bottom: 10px;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#nav-bar > ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 850px) {
+    #nav-bar > ul {
+        flex-direction: column;
+        text-align: right;
+        row-gap: 1rem;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 658px) {
+    #header {
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 2rem;
+    }
+
+    #nav-bar > ul {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 1rem;
+    }
+}
+
+#features{
+    padding-top: 15rem;
+}
+
+@media (max-width: 658px){
+    #features{
+        padding-top: 25rem;
+    }
+}
+
+#in-action{
+    padding-top: 15rem;
+}
+
+@media (max-width: 658px){
+    #in-action{
+        padding-top: 25rem;
+    }
+}
+
+#prices{
+    padding-top: 15rem;
+}
+
+@media (max-width: 658px){
+    #prices{
+        padding-top: 28rem;
+    }
+}
+
+#hero {
+    padding-top: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+}
+
+@media (max-width: 658px){
+    #hero{
+        padding-top: 35rem;
+    }
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+#hero > h2 {
+    margin-bottom: 2rem;
+    word-wrap: break-word;
+}
+
+#hero input[type='email'] {
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+}
+
+#hero .button{
+    margin-top: 2rem;
+}
+
+.button {
+    background-color: var(--text);
+    color: var(--background);
+    padding: 1rem 2rem;
+    margin: 0;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.icon {
+    color: var(--accent);
+}
+
+.container {
+    padding: 0 11rem;
+}
+
+@media (max-width: 950px){
+    .container {
+        padding: 0 4rem 0 3rem;
+    }
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+#features {
+    margin-top: 30px;
+}
+
+#features .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 20vw;
+    color: var(--accent);
+    font-size: 1.8rem;
+
+}
+
+@media (max-width: 658px) {
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#features .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+    width: 80vw;
+    padding: 5px;
+}
+
+@media (max-width: 658px) {
+    #features .desc {
+        width: 100%;
+        padding: 0;
+        height: 120px;
+    }
+    #features .icon {
+        height: 90px;
+    }
+}
+
+@media (max-width: 650px) {
+    #features {
+        margin-top: 0;
+    }
+}
+
+.desc p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+#in-action {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    max-width: 650px;
+    height: 400px;
+    width: 100%;
+    border: 0.5rem solid var(--accent);
+    border-radius: 1rem;
+}
+
+.caption {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+#prices {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+@media (max-width: 950px){
+    #prices{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.product{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60rem;
+    background-color: white;
+    border: 1px solid var(--accent);
+    border-radius: 1rem;
+}
+
+.product img {
+    background-color: white;
+}
+
+.mpc60 {
+    padding: 29.25px 0px;
+}
+
+.mpc3000 {
+    padding: 9.96px 0px;
+}
+
+.mpc2000 {
+    padding: 34.22px 0px;
+}
+
+.level {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 3rem;
+    color: var(--accent);
+    background-color: var(--accent2);
+}
+
+.product ol {
+    padding-inline: 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+footer {
+    width: 100%;
+    margin-top: 15rem;
+    background-color: var(--background2);
+    padding: 30px 100px;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+footer > ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.2rem;
+}
+
+footer > ul > li a{
+    font-size: 1.8rem;
+}
+
+footer > span {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+}
